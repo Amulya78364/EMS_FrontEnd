@@ -1,0 +1,42 @@
+<div class="text-center">
+<button type="button" (click)="getexpenses()">View Expenses </button>
+</div>
+<br><br><br>
+
+<p *ngIf="!exp"><em>Loading...</em></p>
+
+<table class="table" border ="1" style="margin-left: auto;margin-right: auto;"  *ngIf="exp">
+    <thead>
+      
+        <tr>
+            <th>User Name    </th>
+            <th>Designation</th>
+            <th>Expense Type</th>
+            <th>Expense Amount</th>
+           
+
+        </tr >
+        <tr *ngFor="let e of exp">
+<td>{{e.user.userName}}</td>
+<td>{{e.user.designation}}</td>
+<td>{{e.expenseType}}</td>
+<td>{{e.amount}}</td>
+
+
+
+        </tr>
+    </thead>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
