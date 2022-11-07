@@ -8,12 +8,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
+import { ExpensedetailsComponent } from './viewexpenses/expensedetails.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ViewexpensesComponent
+    ViewexpensesComponent,
+    ExpensedetailsComponent,
   ],
   imports: [
     BrowserModule,

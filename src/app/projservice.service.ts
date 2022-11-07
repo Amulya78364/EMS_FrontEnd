@@ -16,4 +16,8 @@ getexpenses(){
   return this.http.get<any>("http://localhost:8080/ems/getExpenses");
 }
 
+getExpenseDetails(expenseId:Number){
+  return this.http.get<any>(`http://localhost:8080/expensedetails/${expenseId}`)
+}
+
 }
