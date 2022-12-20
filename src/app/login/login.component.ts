@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProjserviceService } from '../projservice.service';
 
@@ -8,19 +9,29 @@ import { ProjserviceService } from '../projservice.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-x:any;
-  constructor(private router:Router,public ser:ProjserviceService) { }
+
+  constructor(private router:Router,public service:ProjserviceService,private fb: FormBuilder) { }
+  loginform: FormGroup;
+  msg:boolean=false;
 
   ngOnInit(): void {
-
+    this.loginform=this.fb.group({
+      userName: ['',Validators.required],
+      designation:['',Validators.required]
+    });
   }
 
-  call(){
-    return this.ser.conn().subscribe(
-data=>{
-  this.x=data;
-}
-    );
+  onSubmit(){
+    this.service.postuser(this.loginform.value).subscribe(
+      result=>{
+      console.log(result)
+      this.msg=true;
+      this.loginform.reset( {} );
+    });
+  }
+
+  removeMessage(){
+    this.msg=false;
   }
 
 }

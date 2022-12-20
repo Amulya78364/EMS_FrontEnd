@@ -1,4 +1,20 @@
-<p>login works!</p>
-<router-outlet></router-outlet>
-<button type="button" (click)="call()">click me to connect to backend </button>
-<p>{{this.x}}</p>
+<br><br><br>
+<div *ngIf="msg" class="alert alert-success alert-dismissable fade show" role="alert" style="text-align:center">
+    <h1><strong>User Details Submitted</strong>
+    <button (click)="removeMessage()" type="button" data-bs-dismiss="alert" aria-label="close">X</button></h1>
+</div>
+<div class="form">
+    <h2><i>Enter Your Details</i></h2>
+    <form ngNativeValidate [formGroup]="loginform" (ngSubmit)="onSubmit()">
+        
+        <label for="userName">User Name: </label>
+        <input type="text" id="userName" placeholder="Enter Your Name.." formControlName="userName" required pattern="[a-zA-Z ]*">
+        <br><br>
+        
+        <label for="designation">Designation: </label>
+        <input type="text" id="designation" placeholder="Enter Designation.." formControlName="designation" required pattern="[a-zA-Z ]*">
+        <br><br>
+
+        <input id="button" type="submit" value="submit">
+    </form>
+</div>

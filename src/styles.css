@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-toolbar.mat-primary {
+    background: #0000008a;
+    color: #fff;
+  }
+  .mat-mdc-unelevated-button.mat-unthemed {
+    --mdc-filled-button-container-color: #e0e0e0;
+    --mdc-filled-button-label-text-color: #212121;
+}
+  

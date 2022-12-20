@@ -1,26 +1,16 @@
 <br><br><br>
-<div class="text-center">  
-    <!-- <form ngNativeValidate [formGroup]="enterusernameform" (ngSubmit)="onSubmit()">
-        <label for="userName">Enter User Name: </label>
-        <input type="text" id="userName" placeholder="Enter User Name.." formControlName="userName" required pattern="[a-zA-Z ]*">
-        <br><br>
-        <input type="submit" value="submit">
-</form> -->
-    <!-- <button type="button" (click)="getexpenses()">View Expenses </button> -->
-</div>
-
-<br><br><br>
+<h1 style="text-align:center">{{msg}}</h1>
 
 <p *ngIf="!exp"><em>Loading...</em></p>
 
-<table class="table" *ngIf="!msg" >
+<table class="table" *ngIf="!message">
 <!-- *ngIf="exp"> -->
       
         <tr>
-            <th>Expense Id</th>
+            <!-- <th>Expense Id</th> -->
             <!-- <th>User Id</th>   -->
             <th>User Name</th>
-            <!-- <th>Designation</th> -->
+            <th>Designation</th>
             <th>Expense Type</th>
             <th>Amount</th>
            
@@ -33,23 +23,10 @@
             <td>{{e.user.designation}}</td>
         </tr> -->
         <tr *ngFor="let e of exp">
-            <td>{{e.expenseId}}</td>
+            <!-- <td>{{e.expenseId}}</td> -->
             <td>{{e.user.userName}}</td>
+            <td>{{e.user.designation}}</td>
             <td>{{e.expenseType}}</td>
             <td>{{e.amount}}</td>
         </tr>
 </table>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-

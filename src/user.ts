@@ -1,6 +1,6 @@
 export class user{
     
- userId:number;
+ userId?:number;
 
 userName:String;
 

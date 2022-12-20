@@ -1,8 +1,32 @@
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
 <h1>
      <i>Manage Your Expenses</i>
 </h1>
 
-</div>
-
-<router-outlet></router-outlet>
+</div>-->
+<header>
+  <br>
+ <h1 style="text-align:center"><B>Manage Your Expenses</B></h1>
+     <mat-toolbar color="primary">
+       <button mat-icon-button [routerLink]="['/']">
+         <mat-icon>
+           home
+         </mat-icon>
+       </button>
+       <br><br>
+       <a mat-flat-button  [routerLink]="['/login']">
+         Enter User Details
+       </a>
+       <a mat-flat-button  [routerLink]="['/enterexpense']">
+         Enter Expenses
+       </a>
+       <a mat-flat-button [routerLink]="['/viewexpense']">
+        View Expenses
+      </a>
+      <a mat-flat-button [routerLink]="['/adminviewexpense']">
+        View Expenses - Admin
+      </a>
+       <span class="separator"></span>
+     </mat-toolbar>
+   </header>
+   <router-outlet></router-outlet>
