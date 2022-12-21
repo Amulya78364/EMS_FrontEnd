@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 const oktaConfig = {
   issuer: 'https://dev-67470111.okta.com/oauth2/default',
   clientId: '0oa7huj43rofzllq55d7',
-  redirectUri: window.location+'/callback',
+  redirectUri: window.location.origin+'/callback',
   scopes: ['openid', 'profile'],
   pkce:false
 };
