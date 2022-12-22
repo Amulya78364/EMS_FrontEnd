@@ -12,37 +12,37 @@ export class ProjserviceService {
   constructor(private http:HttpClient) { }
 
 conn():Observable<any>{
-  return this.http.get<any>("http://35.163.152.113:8080/ems");
+  return this.http.get<any>("http://34.217.127.59:8080/ems");
 }
 
 postuser(user:user){
   //  console.log(data);
-   return this.http.post("http://35.163.152.113:8080/webapi/ems/postUser",user);
+   return this.http.post("http://34.217.127.59:8080/webapi/ems/postUser",user);
 }
 
 postusername(uname:string){
   console.log(uname);
-  return this.http.post("http://35.163.152.113:8080/webapi/ems/postUsername",uname);
+  return this.http.post("http://34.217.127.59:8080/webapi/ems/postUsername",uname);
 }
 
 postexpenses(expense:expense){
- return this.http.post("http://35.163.152.113:8080/webapi/ems/postExpenses",expense);
+ return this.http.post("http://34.217.127.59:8080/webapi/ems/postExpenses",expense);
 //  console.log(data);
 }
 
 getexpenses(){
-  return this.http.get<any>("http://35.163.152.113:8080/webapi/ems/getExpenses");
+  return this.http.get<any>("http://34.217.127.59:8080/webapi/ems/getExpenses");
 }
 
 getallexpenses(){
-  return this.http.get<any>("http://35.163.152.113:8080/webapi/ems/getAllExpenses");
+  return this.http.get<any>("http://34.217.127.59:8080/webapi/ems/getAllExpenses");
 }
 
 getExpenseDetails(expenseId:Number){
-  return this.http.get<any>(`http://35.163.152.113:8080/webapi/expensedetails/${expenseId}`);
+  return this.http.get<any>(`http://34.217.127.59:8080/webapi/expensedetails/${expenseId}`);
 }
 
 test(){
-  return this.http.get<any>("http://35.163.152.113:8080/test/1");
+  return this.http.get<any>("http://34.217.127.59:8080/test/1");
 }
 }
