@@ -7,17 +7,12 @@ expenseId:number,
 
 expenseType:string,
 
-amount:number,
-
-
-user:user){}
+amount:number,){}
 
 expenseId:number;
 
 expenseType:string;
 
 amount:number;
-
-user:user;
 
 }

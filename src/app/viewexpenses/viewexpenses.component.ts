@@ -58,12 +58,4 @@ getexpenses():void{
     }
   )
 }
-
-
-// onSubmit(){
-//   this.service.postusername(this.enterusernameform.value).subscribe(
-//     result=>{console.log(result)}
-//   );
-//   this.getexpenses();  
-// }
 }

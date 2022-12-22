@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { expense } from 'src/expense';
+import { user } from 'src/user';
 import { ProjserviceService } from '../projservice.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ProjserviceService } from '../projservice.service';
   styleUrls: ['./adminviewexpenses.component.css']
 })
 export class AdminviewexpensesComponent {
-  exp:expense[]=[];
+  user:user[]=[];
   msg:string;
   message:boolean=false;
 
@@ -22,9 +23,9 @@ export class AdminviewexpensesComponent {
   onSubmit(){
     this.service.getallexpenses().subscribe(
       data=>{
-  this.exp=data;
-  console.log(this.exp);
-  if (this.exp.length==0) {
+  this.user=data;
+  console.log(this.user);
+  if (this.user.length==0) {
     this.msg="You are not an admin!";
     this.message=true;
   }

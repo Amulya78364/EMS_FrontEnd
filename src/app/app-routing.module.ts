@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminenterexpensesComponent } from './adminenterexpenses/adminenterexpenses.component';
 import { AdminviewexpensesComponent } from './adminviewexpenses/adminviewexpenses.component';
 import { LoginComponent } from './login/login.component';
 import { EnterexpensesComponent } from './viewexpenses/enterexpenses.component';
@@ -7,9 +8,9 @@ import { ExpensedetailsComponent } from './viewexpenses/expensedetails.component
 import { ViewexpensesComponent } from './viewexpenses/viewexpenses.component';
 
 const routes: Routes = [
-  {
-    path:'login',component:LoginComponent
-  },
+  // {
+  //   path:'login',component:LoginComponent
+  // },
   {
     path:'viewexpense',
     component:ViewexpensesComponent
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path:'adminviewexpense',
     component: AdminviewexpensesComponent
+  },
+  {
+    path:'adminenterexpense',
+    component:AdminenterexpensesComponent
   }
 ];
 

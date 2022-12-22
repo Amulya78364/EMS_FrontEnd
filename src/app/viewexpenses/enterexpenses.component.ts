@@ -13,6 +13,7 @@ export class EnterexpensesComponent implements OnInit {
   enterexpenseform: FormGroup;
   enteruserform: FormGroup;
   msg:boolean=false;
+ 
 
   constructor(private service:ProjserviceService,private fb: FormBuilder) { }
 
@@ -21,13 +22,11 @@ export class EnterexpensesComponent implements OnInit {
       expenseType: [(''),Validators.required],
       amount: [(''),Validators.required]
     });
-  }
+    this.enteruserform=this.fb.group({
+      name1: [(''),Validators.required],
+    });
 
-  // onUserSubmit(){
-  //   this.service.postusername(this.enteruserform.value).subscribe(
-  //     result=>{console.log(result)}
-  //   );
-  // }
+  }
 
   onSubmit(){
   //  console.log(this.reactiveform.value)
@@ -36,9 +35,11 @@ export class EnterexpensesComponent implements OnInit {
   //     console.log(data)
   //   }
   //  )
+
   this.service.postexpenses(this.enterexpenseform.value).subscribe(
     result=>{
       console.log(result)
+      console.log(this.enterexpenseform.value)
       this.msg=true;
       this.enterexpenseform.reset( {} );
     }

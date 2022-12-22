@@ -1,8 +1,10 @@
+import { expense } from "./expense";
+
 export class user{
     
  userId?:number;
 
-userName:String;
+ emailId:String;
 
- designation:String;
+ expense:expense[]=[];
 }

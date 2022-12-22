@@ -19,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { AdminviewexpensesComponent } from './adminviewexpenses/adminviewexpenses.component';
+import { AdminenterexpensesComponent } from './adminenterexpenses/adminenterexpenses.component';
 
 
 @NgModule({ 
@@ -29,6 +30,7 @@ import { AdminviewexpensesComponent } from './adminviewexpenses/adminviewexpense
     ExpensedetailsComponent,
     EnterexpensesComponent,
     AdminviewexpensesComponent,
+    AdminenterexpensesComponent,
   ],
   imports: [
     BrowserModule,

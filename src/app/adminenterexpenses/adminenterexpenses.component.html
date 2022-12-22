@@ -4,10 +4,24 @@
     <button (click)="removeMessage()" type="button" data-bs-dismiss="alert" aria-label="close">X</button></h1>
 </div>
 
-<div class="form">
-        <form ngNativeValidate [formGroup]="enterexpenseform" (ngSubmit)="onSubmit()">
-        
-        <h2><i>Enter Your Expenses</i></h2>
+<h1 style="text-align:center">{{message}}</h1>
+ 
+<div class="form" *ngIf="msg1">
+        <form ngNativeValidate [formGroup]="enteradminuserform" (ngSubmit)="onUserSubmit()">
+            <label for="username">User Name: </label>
+            <select name="user-names" id="user-names" formControlName="emailId">
+                <option *ngFor="let l of listunames" [value]="l">
+                    {{l}}
+                  </option> 
+            </select>
+            <br><br>
+            <input type="submit" value="submit">
+</form>
+</div>
+
+<br><br>
+<div class="form" *ngIf="msg1">
+    <form ngNativeValidate [formGroup]="enteradminexpenseform" (ngSubmit)="onSubmit()">
         <label for="exptype">Expense Type: </label>
         <input type="text" id="exptype" placeholder="Enter Expense Type.." formControlName="expenseType" required pattern="[a-zA-Z ]*">
         <br><br>

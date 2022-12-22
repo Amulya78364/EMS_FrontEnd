@@ -15,19 +15,32 @@ conn():Observable<any>{
   return this.http.get<any>("http://34.217.127.59:8080/ems");
 }
 
-postuser(user:user){
+// postuser(user:user){
+//   //  console.log(data);
+//    return this.http.post("http://localhost:8080/webapi/ems/postUser",user);
+// }
+
+postuser(){
   //  console.log(data);
-   return this.http.post("http://34.217.127.59:8080/webapi/ems/postUser",user);
+   return this.http.get("http://34.217.127.59:8080/webapi/ems/postUser");
 }
 
-postusername(uname:string){
-  console.log(uname);
-  return this.http.post("http://34.217.127.59:8080/webapi/ems/postUsername",uname);
+postusername(emailId:string){
+  console.log(emailId);
+  return this.http.post("http://34.217.127.59:8080/webapi/ems/postUsername",emailId);
+}
+
+getusername(){
+  return this.http.get("http://34.217.127.59:8080/webapi/ems/getUserName")
 }
 
 postexpenses(expense:expense){
  return this.http.post("http://34.217.127.59:8080/webapi/ems/postExpenses",expense);
 //  console.log(data);
+}
+
+postadminexpenses(expense:expense){
+  return this.http.post("http://34.217.127.59:8080/webapi/ems/postAdminExpenses",expense);
 }
 
 getexpenses(){

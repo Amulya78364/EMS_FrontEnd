@@ -22,12 +22,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    this.service.postuser(this.loginform.value).subscribe(
-      result=>{
-      console.log(result)
-      this.msg=true;
-      this.loginform.reset( {} );
-    });
+  //   this.service.postuser(this.loginform.value).subscribe(
+  //     result=>{
+  //     console.log(result)
+  //     this.msg=true;
+  //     this.loginform.reset( {} );
+  //   });
   }
 
   removeMessage(){
